@@ -1,0 +1,66 @@
+<p>home works!</p>
+
+<p>if else topic</p>
+
+@if (a>12) {
+  <p>if statement executed</p>
+}
+ @else if(a==12) {
+    <p>else if statement executed</p>
+}
+@else  {
+    <p>else  statement executed</p>
+}
+
+<p>Switch case Topic</p>
+
+
+@switch (hero) {
+  @case ('Heman') {
+    <p>Heman with Ela</p>
+  }
+  @case ('Superman') {
+    <p>Superman with woder women</p>
+  }
+  @case ('shaktiman') {
+    <p>Shaktiman with gita vishwas</p>
+  }
+  @default {
+    <p>single hero</p>
+  }
+}
+
+<p>looping started</p>
+
+<ul>
+@for (item of carlist; track item) {
+  <li>{{item}}</li>
+}
+</ul>
+
+<table>
+    <th>sno</th>
+    <th>id</th>
+    <th>name</th>
+    @for (item of sports ; track item.id; let sno=$index;let e=$even;let o=$odd;let f=$first;let l=$last;) { 
+      <tr>
+        <td>{{sno+1}}-{{e}}-{{o}}-{{f}}-{{l}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+      </tr>
+    }
+</table>
+
+
+{{a==10?'hello':'bye'}}
+
+<input type="{{choice}}" value="{{hero}}" />
+
+<input type="text" [value]="a" [disabled]="false">
+
+<div [attr.title]="title">test</div>
+<a [attr.href]="google">click to google</a>
+<input type="text" [attr.value]="a" [attr.disabled]="isAvailable">
+<a  disabled [attr.href]="google">testing</a>
+  
+<button (click)="hitme(10)">hit me</button>
