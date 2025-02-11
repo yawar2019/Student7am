@@ -64,3 +64,13 @@
 <a  disabled [attr.href]="google">testing</a>
   
 <button (click)="hitme(10)">hit me</button>
+<button (click)="fun2($event)">fun2</button>
+
+<span [class]="firstcss" class="second">got it</span>
+<span [class]="firstcssarr">great to see u</span>
+<span [class]="firstobj">great wall of india</span>
+<span [style]="firstStyle">Hi style</span>
+<span [style.color]="secondStyle">Hi style2</span>
+
+<input type="text" [(ngModel)]="Username"/><br>
+{{Username}}

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home,[app-home],.app-home',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -36,6 +37,23 @@ hitme(a:any)
 {
   alert('some one hitted me'+a);
 }
+
+fun2(event:any)
+{
+  console.log(event);
+}
+
+firstcss="first";
+firstcssarr=["first","second","third"];
+firstobj={
+  first:false,
+  second:true,
+  third:true
+}
+hastrue=true;
+firstStyle={"color":"red","background-color":"cyan"}
+secondStyle=this.hastrue?"green":"red";
+Username='shivam';
 }
 
 
