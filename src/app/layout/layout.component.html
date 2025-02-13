@@ -1,7 +1,7 @@
 
 <div class="container mt-3">
     <!-- Nav pills -->
-    <ul class="nav nav-pills" role="tablist">
+    <!-- <ul class="nav nav-pills" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" data-bs-toggle="pill" routerLink="/">Home</a>
       </li>
@@ -11,7 +11,28 @@
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="pill" routerLink="/contact">Contact</a>
       </li>
-    </ul>
+    </ul> -->
+
+
+    <nav class="navbar navbar-expand-sm bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+              true}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about',1,'Ravi']" 
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+              true}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+              true}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
    
     <!-- Tab panes -->
     <div class="tab-content">
@@ -21,3 +42,5 @@
 
     </div>
 </div>
+
+
