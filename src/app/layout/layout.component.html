@@ -23,7 +23,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/about',1,'Ravi']" 
-            routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+        [queryParams]="{page:1,search:'shiva'}" fragment="loading"   routerLinkActive="active" [routerLinkActiveOptions]="{exact:
               true}">About</a>
           </li>
           <li class="nav-item">

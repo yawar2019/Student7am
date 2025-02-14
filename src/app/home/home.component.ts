@@ -68,7 +68,9 @@ constructor(private router:Router)
 GotoAbout()
 {
  // this.router.navigateByUrl('/about');
- this.router.navigate(['/about',1,'Srija']);
+ //this.router.navigate(['/about',1,'Srija']);
+ this.router.navigate(['/about',1,'Srija'],
+  {queryParams:{page:1,search:'rabbit'},fragment:'loading'});
 }
 
 }

@@ -31,6 +31,20 @@ constructor(private route:ActivatedRoute)
       }
     })
 
+console.log(this.route.snapshot.queryParams['page']);
+console.log(this.route.snapshot.queryParams['search']);
+console.log(this.route.snapshot.fragment);
+
+this.route.queryParams.subscribe((data:Params)=>{
+  console.log('query params details '+data['page']);
+console.log('query params details '+data['search']);
+
+})
+
+
+this.route.fragment.subscribe((data)=>{
+  console.log('fragment params details '+data);
+})
 
   }
 
