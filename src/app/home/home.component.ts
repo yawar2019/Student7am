@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AppServiceService } from '../app-service.service';
 
 @Component({
   selector: 'app-home,[app-home],.app-home',
@@ -15,6 +16,21 @@ choice:string="true";
 isAvailable:boolean=true;
 title:string="Angular";
 google="http://www.google.com";
+
+constructor(private router:Router,private apps:AppServiceService)
+{
+
+}
+login()
+{
+this.apps.setAuthDetails('true');
+}
+
+logout()
+{
+  this.apps.setAuthDetails('false');
+  
+}
 
 
 carlist=['BMW','TESLA','AUDI','THAR']
@@ -55,14 +71,6 @@ hastrue=true;
 firstStyle={"color":"red","background-color":"cyan"}
 secondStyle=this.hastrue?"green":"red";
 Username='shivam';
-
-
-constructor(private router:Router)
-{
-
-}
-
-
 
 
 GotoAbout()
