@@ -1,8 +1,60 @@
 <p>directives-example works!</p>
 
-<div *ngIf="isAvailable;else elseblock">
+<div *ngIf="isAvailable; then thenblock ;else elseblock">
    <p style="color:green"> India going to WIN Ct2025 </p>
 </div>
-<ng-template #elseblock>
-    <p style="color:red"> India Definately win Ct2025</p>
+<ng-template #thenblock>
+    <p style="color:rgb(0, 128, 255)"> India in blue jersey</p>
 </ng-template>
+<ng-template #elseblock>
+    <p style="color:red"> India in red jersey</p>
+</ng-template>
+
+<!-- 
+switch case -->
+
+<div [ngSwitch]="hero">
+    <div *ngSwitchCase="'Shivam'">shivam hi shaktiman hai</div>
+    <div *ngSwitchCase="'SriHari'">srihari hi ironman hai</div>
+    <div *ngSwitchCase="'Dipankar'">Dipankar hi hulk hai</div>
+    <div *ngSwitchDefault>Liga hi Wonder women hai </div>
+</div>
+
+<!-- 
+ngFor  Example1-->
+
+<ul>
+<li *ngFor="let c of Cars">
+    
+ {{c}} 
+ 
+</li>
+
+</ul>
+
+<!-- Example2 -->
+<table>
+    <tr>
+        <th>Sno</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>even</th>
+        <th>odd</th>
+        <th>first</th>
+        <th>last</th>
+    </tr>
+    <tr *ngFor="let s of Sports; let i=index;let e=even;let o=odd;let f=first;let l=last">
+        <td>{{i}}</td>
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{e}}</td>
+        <td>{{o}}</td>
+        <td>{{f}}</td>
+        <td>{{l}}</td>
+    </tr>
+</table>
+ 
+<!-- Attribute Directives -->
+<p [ngClass]="firstObj" class="third">Shivam</p>
+<p [ngStyle]="firstStyle">Sharad</p>
+ 
