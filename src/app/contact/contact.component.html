@@ -4,4 +4,4 @@
     <li><a [routerLink]="['/contact',2,'Krishna']">Krishna</a></li>
     <li><a [routerLink]="['/contact',3,'Hari']">Hari</a></li>
 </ul>
-<router-outlet></router-outlet>
+<router-outlet [parentData]="username"></router-outlet>

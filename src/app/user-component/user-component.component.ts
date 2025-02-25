@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { IDeactivate } from '../app-guard.service';
 @Component({
@@ -13,7 +13,7 @@ export class UserComponentComponent implements OnInit,IDeactivate {
     name:""
   }
 
-
+@Input() parentData:string="";
   constructor(private route:ActivatedRoute)
 {
  

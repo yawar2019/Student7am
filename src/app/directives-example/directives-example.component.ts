@@ -24,4 +24,8 @@ firstObj={
   //third:false
 }
 firstStyle={"color":"red","background-color":"gray"};
+fun(a:any)
+{
+console.log('I got value for u '+a.type);
+}
 }

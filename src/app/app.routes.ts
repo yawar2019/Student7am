@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { UserComponentComponent } from './user-component/user-component.component';
 import { AppGuardService } from './app-guard.service';
 import { DirectivesExampleComponent } from './directives-example/directives-example.component';
+import { ParenttoChildComponent } from './parentto-child/parentto-child.component';
 
 export const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
 {path:'contact',component:ContactComponent,canActivateChild:[AppGuardService],
 children:[{path:':id/:name',component:UserComponentComponent,canDeactivate:[AppGuardService]}]},
 {path:'directive',component:DirectivesExampleComponent},
+{path:'parent',component:ParenttoChildComponent},
 
 ];
