@@ -1,4 +1,6 @@
 <p>parentto-child works!</p>
 
+<button (click)="showMessage()">alert message data</button>
+<app-childto-parent [parentdata]="username" (chilData)="message=$event"></app-childto-parent>
 
-<app-childto-parent [parentdata]="username"></app-childto-parent>
+{{message}}

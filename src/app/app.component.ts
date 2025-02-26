@@ -3,13 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'cpp-root,.cpp-boot,[app-root]',
   imports: [RouterOutlet,HomeComponent],
-  // templateUrl: './app.component.html',
-  template: `<p>Hello Brother {{studentName}}</p>
-             <button>click me</button>
-             <h1>great</h1>
-             <input/>`,
+   templateUrl: './app.component.html',
+  // template: `<p>Hello Brother {{studentName}}</p>
+  //            <button>click me</button>
+  //            <h1>great</h1>
+  //            <input/>`,
   //styleUrl: './app.component.css'
 styles:[`
   p

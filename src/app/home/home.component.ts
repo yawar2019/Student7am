@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppServiceService } from '../app-service.service';
+import { AppHighlighttextDirectiveDirective } from '../app-highlighttext-directive.directive';
+import { AppRedHighlightTextcolorDirective } from '../app-red-highlight-textcolor.directive';
 
 @Component({
   selector: 'app-home,[app-home],.app-home',
-  imports: [FormsModule],
+  imports: [FormsModule,AppHighlighttextDirectiveDirective,AppRedHighlightTextcolorDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

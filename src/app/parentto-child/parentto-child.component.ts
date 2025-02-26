@@ -9,4 +9,10 @@ import { ChildtoParentComponent } from '../childto-parent/childto-parent.compone
 })
 export class ParenttoChildComponent {
 username='shivam agrawal';
+message='';
+
+showMessage()
+{
+  console.log('i have receive message from child '+this.message);
+}
 }

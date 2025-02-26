@@ -6,6 +6,7 @@ import { UserComponentComponent } from './user-component/user-component.componen
 import { AppGuardService } from './app-guard.service';
 import { DirectivesExampleComponent } from './directives-example/directives-example.component';
 import { ParenttoChildComponent } from './parentto-child/parentto-child.component';
+import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
 
 export const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -14,5 +15,5 @@ export const routes: Routes = [
 children:[{path:':id/:name',component:UserComponentComponent,canDeactivate:[AppGuardService]}]},
 {path:'directive',component:DirectivesExampleComponent},
 {path:'parent',component:ParenttoChildComponent},
-
+{path:'template',component:SimpletemplateformComponent}
 ];
