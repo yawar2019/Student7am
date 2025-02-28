@@ -2,9 +2,20 @@
 <form class="row g-3 needs-validation" novalidate #stdForm="ngForm">
     <div class="col-md-4">
       <label for="validationCustom01" class="form-label">First name</label>
-      <input type="text" class="form-control" name="firstName" [(ngModel)]="studentObj.firstName" value="Mark" required>
-      <div class="valid-feedback">
-        Looks good!
+      <input type="text" class="form-control" #fname="ngModel" name="firstName" [(ngModel)]="studentObj.firstName" value="Mark" required minlength="3">
+      <div class="text-danger">
+      
+        @if(fname.errors?.['required'] && fname.touched)
+        {
+Required!
+        }
+
+        @if(fname.errors?.['minlength'] && fname.touched)
+        {
+Min 3 Characters are allowed
+        }
+
+       
       </div>
     </div>
     <div class="col-md-4">
