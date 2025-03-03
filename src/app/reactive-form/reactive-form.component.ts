@@ -12,9 +12,9 @@ export class ReactiveFormComponent {
   IndiaStates=[{id:1,name:"Telangana"},{id:2,name:"Karnataka"},{id:3,name:"Andhra"},]
 
   studentForm:FormGroup=new FormGroup({
-    firstName:new FormControl("Alice",[Validators.required]),
-    lastName:new FormControl(""),
-    userName:new FormControl(""),
+    firstName:new FormControl("Alice",[Validators.required,Validators.maxLength(6)]),
+    lastName:new FormControl("",[Validators.required,Validators.minLength(3)]),
+    userName:new FormControl("",[Validators.required,Validators.email]),
     city:new FormControl(""), 
     state:new FormControl(""),
     zipCode:new FormControl(""),

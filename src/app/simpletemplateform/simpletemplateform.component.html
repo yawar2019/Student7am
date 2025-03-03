@@ -4,8 +4,14 @@
       <label for="validationCustom01" class="form-label">First name</label>
       <input type="text" class="form-control" #fname="ngModel" name="firstName" [(ngModel)]="studentObj.firstName" value="Mark" required minlength="3">
       <div class="text-danger">
-      
-        @if(fname.errors?.['required'] && fname.touched)
+      <div *ngIf="fname.errors?.['required'] && fname.touched">
+        Required
+      </div>
+
+      <div *ngIf="fname.errors?.['minlength'] && fname.touched">
+        Min 3 Characters are allowed
+      </div>
+        <!-- @if(fname.errors?.['required'] && fname.touched)
         {
 Required!
         }
@@ -13,7 +19,7 @@ Required!
         @if(fname.errors?.['minlength'] && fname.touched)
         {
 Min 3 Characters are allowed
-        }
+        } -->
 
        
       </div>
@@ -29,9 +35,11 @@ Min 3 Characters are allowed
       <label for="validationCustomUsername" class="form-label">Username</label>
       <div class="input-group has-validation">
         <span class="input-group-text" id="inputGroupPrepend">Username</span>
-        <input type="text" class="form-control" name="userName" [(ngModel)]="studentObj.userName" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          Please choose a username.
+        <input type="text" class="form-control" name="userName" #uname="ngModel" [(ngModel)]="studentObj.userName" aria-describedby="inputGroupPrepend" required email>
+        <div class="text-danger">
+          <div *ngIf="uname.errors?.['email']">
+            Invalid Email!
+          </div>
         </div>
       </div>
     </div>
@@ -71,7 +79,8 @@ Min 3 Characters are allowed
       </div>
     </div>
     <div class="col-12">
-      <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit form</button>
+      <button class="btn btn-primary" type="button"  (click)="onSubmit(stdForm.invalid)">Submit form</button>
+      <!-- <button class="btn btn-primary" type="button" [disabled]="stdForm.invalid" (click)="onSubmit(stdForm.invalid)">Submit form</button> -->
     </div>
   </form>
 </div>

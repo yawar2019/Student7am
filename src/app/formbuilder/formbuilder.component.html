@@ -1,13 +1,13 @@
-<form class="row g-3 needs-validation" novalidate [formGroup]="studentForm">
+<form class="row g-3 needs-validation" novalidate [formGroup]="stdForm">
     <div class="col-md-4">
       <label for="validationCustom01" class="form-label">First name</label>
       <input type="text" class="form-control" name="firstName" formControlName="firstName" value="Mark">
       <div class="text-danger">
-        @if(studentForm.controls['firstName'].errors?.['required'] && studentForm.controls['firstName'].touched)
+        @if(stdForm.controls['firstName'].errors?.['required'] && stdForm.controls['firstName'].touched)
         {
 Required
         }
-        @if(studentForm.controls['firstName'].errors?.['maxlength'] && studentForm.controls['firstName'].touched)
+        @if(stdForm.controls['firstName'].errors?.['maxlength'] && stdForm.controls['firstName'].touched)
         {
 max 6 characters
         }
@@ -17,14 +17,14 @@ max 6 characters
       <label for="validationCustom02" class="form-label">Last name</label>
       <input type="text" class="form-control" name="lastName" formControlName="lastName" value="Otto" required>
       <div class="text-danger">
-        @if(studentForm.controls['lastName'].errors?.['required'] && studentForm.controls['firstName'].touched)
+        <!-- @if(studentForm.controls['lastName'].errors?.['required'] && studentForm.controls['firstName'].touched)
         {
 required
         }
         @if(studentForm.controls['lastName'].errors?.['minlength'] && studentForm.controls['firstName'].touched)
         {
 min 3 characters
-        }
+        } -->
       </div>
     </div>
     <div class="col-md-4">
@@ -73,6 +73,6 @@ min 3 characters
       </div>
     </div>
     <div class="col-12">
-      <button class="btn btn-primary" type="submit" [disabled]="studentForm.invalid" (click)="onSubmit()">Submit form</button>
+      <button class="btn btn-primary" type="submit" [disabled]="stdForm.invalid" (click)="onSubmit()">Submit form</button>
     </div>
   </form>

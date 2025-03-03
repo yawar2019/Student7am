@@ -8,6 +8,7 @@ import { DirectivesExampleComponent } from './directives-example/directives-exam
 import { ParenttoChildComponent } from './parentto-child/parentto-child.component';
 import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 
 export const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -17,6 +18,6 @@ children:[{path:':id/:name',component:UserComponentComponent,canDeactivate:[AppG
 {path:'directive',component:DirectivesExampleComponent},
 {path:'parent',component:ParenttoChildComponent},
 {path:'template',component:SimpletemplateformComponent},
-{path:'reactive',component:ReactiveFormComponent}
-
+{path:'reactive',component:ReactiveFormComponent},
+{path:'formbuilder',component:FormbuilderComponent}
 ];

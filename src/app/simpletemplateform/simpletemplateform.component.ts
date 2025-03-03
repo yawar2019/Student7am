@@ -20,9 +20,14 @@ export class SimpletemplateformComponent {
     zipCode:"",
     isAgreed:false
   }
-onSubmit()
+onSubmit(invalid:any)
 {
+ if(invalid==true){
+  alert('Please Complete Validations');
+ }
+ else{
   console.log(this.studentObj);
+}
 }
 
 }
