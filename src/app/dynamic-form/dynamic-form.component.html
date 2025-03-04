@@ -1,0 +1,20 @@
+<p>dynamic-form works!</p>
+
+
+<form [formGroup]="form">
+<div *ngFor="let control of formConfig">
+<label>{{control.label}}</label>
+<ng-container [ngSwitch]="control.type">
+    <input *ngSwitchCase="'text'" [type]="control.type" [formControlName]="control.name"/>
+    <select *ngSwitchCase="'dropdown'" [formControlName]="control.name">
+     <option *ngFor="let option of control.options" value="option.key">{{option.label}}</option>
+    </select>
+    <div *ngSwitchCase="'radio'">
+        <label *ngFor="let options of control.options">
+                    <input *ngSwitchCase="'radio'" [type]="control.type" [formControlName]="control.name" />{{options.label}}
+                </label>
+
+    </div>
+</ng-container>
+</div>
+</form>

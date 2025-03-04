@@ -9,6 +9,7 @@ import { ParenttoChildComponent } from './parentto-child/parentto-child.componen
 import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 export const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -19,5 +20,6 @@ children:[{path:':id/:name',component:UserComponentComponent,canDeactivate:[AppG
 {path:'parent',component:ParenttoChildComponent},
 {path:'template',component:SimpletemplateformComponent},
 {path:'reactive',component:ReactiveFormComponent},
-{path:'formbuilder',component:FormbuilderComponent}
+{path:'formbuilder',component:FormbuilderComponent},
+{path:'dynamicformbuilder',component:DynamicFormComponent}
 ];
