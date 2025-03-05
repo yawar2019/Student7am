@@ -10,6 +10,7 @@ import { SimpletemplateformComponent } from './simpletemplateform/simpletemplate
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { ExampleOnPipeComponent } from './example-on-pipe/example-on-pipe.component';
 
 export const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -21,5 +22,6 @@ children:[{path:':id/:name',component:UserComponentComponent,canDeactivate:[AppG
 {path:'template',component:SimpletemplateformComponent},
 {path:'reactive',component:ReactiveFormComponent},
 {path:'formbuilder',component:FormbuilderComponent},
-{path:'dynamicformbuilder',component:DynamicFormComponent}
+{path:'dynamicformbuilder',component:DynamicFormComponent},
+{path:'pipeExample',component:ExampleOnPipeComponent},
 ];

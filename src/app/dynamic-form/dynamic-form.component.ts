@@ -20,7 +20,7 @@ formConfig=[
   value:'',
   validators:{
     required:true,
-    minLength:3
+    minlength:3
   }
 },
 {
@@ -31,7 +31,7 @@ formConfig=[
   value:'',
   validators:{
     required:true,
-    minLength:3
+    minlength:3
   }
 },
 {
@@ -42,7 +42,7 @@ formConfig=[
   value:'',
   validators:{
     required:true,
-    minLength:3
+    minlength:3
   }
 },
 
@@ -65,10 +65,26 @@ formConfig=[
 
 {
 
+  name:'city',
+  type:'dropdown',
+  label:'City',
+  value:'',
+  options:[
+    {key:'Hyd',label:'Hyderabad'},
+    {key:'UK',label:'United Kingdom'},
+    {key:'In',label:'India'}
+  ],
+  validators:{
+    required:true
+     
+  }
+},
+{
+
   name:'gender',
   type:'radio',
   label:'Gender',
-  value:'',
+  value:'Male',
   options:[
     {key:'male',label:'Male'},
     {key:'female',label:'Female'},
@@ -77,6 +93,7 @@ formConfig=[
     required:true
      
   }
+   
 },
 
 
@@ -103,9 +120,9 @@ this.formConfig.forEach(control=>{
   }
 
 
-  if(control.validators?.minLength)
+  if(control.validators?.minlength)
     {
-      validators.push(Validators.minLength(control.validators?.minLength))
+      validators.push(Validators.minLength(control.validators?.minlength))
     }
 
     group[control.name]=[control.value||'',validators];
@@ -115,5 +132,17 @@ this.form=this.fb.group(group);
 
 }
 
+
+onSubmit()
+{
+  if(this.form.valid)
+  {
+    console.log(this.form.value);
+  }
+  else{
+    console.log('form is Invalid');
+
+  }
+}
 
 }
