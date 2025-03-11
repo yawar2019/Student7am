@@ -34,9 +34,22 @@ export class EmployeeDetailsComponent implements OnInit{
   })
 
   }
+
+  EmployeeEdit(id:any){
+    this.service.Employee=this.service.AllEmployees.find(x=>x.EmpId==id) as IEmployee;
+  }
+
 EmployeeDelete(id:any)
 {
-alert(id);
+   let result=confirm("Do you want to Delete?");
+   if(result)
+  {
+this.service.DeleteEmployee(id).subscribe(data=>{
+  this.service.getEmployees().subscribe(data=>{
+    this.service.AllEmployees=data;
+  })
+})
+}
 }
 
 }

@@ -38,8 +38,20 @@ getEmployees():Observable<any>
 
 SaveEmployees(Employee:IEmployee):Observable<any>
 {
+if(Employee.EmpId>0)
+{
+  return this.http.put(this.url+'api/EmployeeApi/'+Employee.EmpId,Employee);
 
+}
+else{
   return this.http.post(this.url+'api/EmployeeApi',Employee);
+}
+}
+
+DeleteEmployee(Id:any):Observable<any>
+{
+
+  return this.http.delete(this.url+'api/EmployeeApi/'+Id);
 
 }
 

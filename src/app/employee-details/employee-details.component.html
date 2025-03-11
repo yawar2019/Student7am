@@ -12,7 +12,10 @@
         <td>{{emp.EmpId}}</td>
         <td>{{emp.EmpName}}</td>
         <td>{{emp.EmpSalary}}</td>
-        <td><a (click)="EmployeeDelete(emp.EmpId)">Delete</a></td>
+        <td>
+            <a (click)="EmployeeEdit(emp.EmpId)">Edit|</a>
+            <a (click)="EmployeeDelete(emp.EmpId)">Delete</a>
+        </td>
     </tr>
 </table>
 
@@ -20,6 +23,8 @@
 <br>
 
 <form #empform="ngForm">
+    <input type="hidden" name="EmpId" [(ngModel)]="service.Employee.EmpId" [value]="service.Employee.EmpId"><br>
+
     <label>EmpName</label>
     <input type="text" name="EmpName" [(ngModel)]="service.Employee.EmpName" [value]="service.Employee.EmpName"><br>
     <label>EmpSalary</label>
