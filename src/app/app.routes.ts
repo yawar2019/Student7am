@@ -12,6 +12,7 @@ import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { ExampleOnPipeComponent } from './example-on-pipe/example-on-pipe.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { ViewChildComponent } from './view-child/view-child.component';
 
 export const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -26,4 +27,5 @@ children:[{path:':id/:name',component:UserComponentComponent,canDeactivate:[AppG
 {path:'dynamicformbuilder',component:DynamicFormComponent},
 {path:'pipeExample',component:ExampleOnPipeComponent},
 {path:'crud',component:EmployeeDetailsComponent},
+{path:'viewChild',component:ViewChildComponent},
 ];
