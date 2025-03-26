@@ -1,0 +1,23 @@
+<p>signalexample works!</p>
+<br>
+
+{{a()*b()}}
+
+<button (click)="setSignal()">Set Signal Value</button>
+{{b()}}
+
+
+{{doubleOfB()}}<br>
+
+{{user().name}}
+
+<button (click)="updateName()">click me</button><br>
+
+
+<ul>
+    <li *ngFor="let car of Cars()">{{car}}</li>
+</ul>
+
+<p *ngIf="isVisible()">hello world</p>
+
+<button (click)="toggle()">hide/show </button>

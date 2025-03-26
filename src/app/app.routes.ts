@@ -14,6 +14,7 @@ import { ExampleOnPipeComponent } from './example-on-pipe/example-on-pipe.compon
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { ViewChildComponent } from './view-child/view-child.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { RxjxExampleComponent } from './rxjx-example/rxjx-example.component';
 
 export const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -29,5 +30,7 @@ children:[{path:':id/:name',component:UserComponentComponent,canDeactivate:[AppG
 {path:'pipeExample',component:ExampleOnPipeComponent},
 {path:'crud',component:EmployeeDetailsComponent},
 {path:'viewChild',component:ViewChildComponent},
-{path:'lifeCycle',component:LifeCycleHooksComponent},
+{path:'lifeCycle',component:LifeCycleHooksComponent},//Rxjs
+{path:'Rxjs',component:RxjxExampleComponent},
+
 ];
